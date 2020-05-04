@@ -1,5 +1,3 @@
-// how to save
-
 /**
  *
  * toggle-macOS-displays-mirror
