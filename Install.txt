@@ -1,0 +1,4 @@
+open .scpt with Script Editor
+save as application
+#saved with suffix .app but body is directory
+grant accesibility on System Preference -> Security and Privacy -> Privacy
