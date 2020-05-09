@@ -3,3 +3,4 @@ save as application
 #saved with suffix .app but body is directory
 grant accesibility on System Preference -> Security and Privacy -> Privacy
 move .app to Application folder
+change icon as you wish
