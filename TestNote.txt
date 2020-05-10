@@ -1,6 +1,11 @@
 09-05-2020 14:06
 スクリプトエディタで動作確認時に.scptがテキストからスクリプトに変更されてしまうことがある．
 スクリプトだとバイナリーになってしまうので注意．
+09-05-2020 17:39
+.AppleScriptと.scptとの違いが不明
+09-05-2020 17:53
+.AppleScript テキスト
+.scpt AppleScript compiled
 gitの名前としては.AppleScriptが面倒がないようだが，.scptが主流派？
 git 内検索結果 AppleScript 2809 scpt 153件
 .scptでsidneysのが表示されないのが不思議 まあそういうものか..
