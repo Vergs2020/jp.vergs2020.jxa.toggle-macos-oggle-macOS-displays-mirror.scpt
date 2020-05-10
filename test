@@ -1,0 +1,2 @@
+# scpt_save_as_text_and_write_app ./toggle-macOS-displays-mirror.app
+open ./toggle-macOS-displays-mirror.app
