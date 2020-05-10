@@ -1,6 +1,11 @@
-open .scpt with Script Editor
+open .applescript with Script Editor
 save as application
-#saved with suffix .app but body is directory
-grant accesibility on System Preference -> Security and Privacy -> Privacy
+#don't forget change from AppleScript to javascript
+
+run application twice
+#application is saved with suffix .app but body is directory
+1st time 	grant accesibility on System Preference -> Security and Privacy -> Privacy
+2nd time	grant yet another confirmation
+
 move .app to Application folder
 change icon as you wish
