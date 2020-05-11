@@ -43,10 +43,52 @@ const appSE = Application('System Events')
 let initialCheckboxValue = 0
 let currentCheckboxValue = 0
 
-
 // Persist start-up state of the "System Preferences" app
 let isRunningSystemPreferences = appSP.running()
 
+// function to test Object
+function isValidIndex(testOBJ){
+	try{
+		testOBJ.properties();
+		return true;
+	}catch(e){
+		var tmp = e.errorNumber;
+		if ((e.errorNumber != -1719) && (e.errorNumber != -1700) && (e.errorNumber != -1728)) {
+			app.displayAlert(e.errorNumber)
+			throw e
+		}
+		return false;
+	}
+}
+
+//value is 0 or 1, True or False So Using -1 as false
+function isValidValue(testOBJ){
+	try{
+		return testOBJ.value();
+	}catch(e){
+		var tmp = e.errorNumber;
+		if ((e.errorNumber != -1719) && (e.errorNumber != -1700) && (e.errorNumber != -1728)) {
+			app.displayAlert(e.errorNumber)
+			throw e
+		}
+	}
+	return (-1);
+}
+
+// function to clck wich check
+function isValidClick(testOBJ){
+	try{
+		testOBJ.click();
+		return true;
+	}catch(e){
+		var tmp = e.errorNumber;
+		if ((e.errorNumber != -1719) && (e.errorNumber != -1700)) {
+			app.displayAlert(e.errorNumber)
+			throw e
+		}
+	}
+	return false;
+}
 
 //Find an existing candidate and get its value
 function findAndValueFromWindow(winOBJ){
@@ -176,52 +218,4 @@ if (!isRunningSystemPreferences) {
 } else {
     // Yes – Return to the overview screen
     appSE.processes.byName('System Preferences').menuBars[0].menuBarItems[3].menus[0].menuItems[2].click()
-}
-
-
-
-
-
-// function to test Object
-function isValidIndex(testOBJ){
-	try{
-		testOBJ.properties();
-		return true;
-	}catch(e){
-		var tmp = e.errorNumber;
-		if ((e.errorNumber != -1719) && (e.errorNumber != -1700) && (e.errorNumber != -1728)) {
-			app.displayAlert(e.errorNumber)
-			throw e
-		}
-		return false;
-	}
-}
-
-//value is 0 or 1, True or False So Using -1 as false
-function isValidValue(testOBJ){
-	try{
-		return testOBJ.value();
-	}catch(e){
-		var tmp = e.errorNumber;
-		if ((e.errorNumber != -1719) && (e.errorNumber != -1700) && (e.errorNumber != -1728)) {
-			app.displayAlert(e.errorNumber)
-			throw e
-		}
-	}
-	return (-1);
-}
-
-// function to clck wich check
-function isValidClick(testOBJ){
-	try{
-		testOBJ.click();
-		return true;
-	}catch(e){
-		var tmp = e.errorNumber;
-		if ((e.errorNumber != -1719) && (e.errorNumber != -1700)) {
-			app.displayAlert(e.errorNumber)
-			throw e
-		}
-	}
-	return false;
 }
